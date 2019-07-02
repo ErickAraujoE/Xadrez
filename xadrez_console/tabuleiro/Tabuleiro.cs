@@ -18,7 +18,6 @@ namespace tabuleiro
             Pecas = new Peca[linhas, colunas];
         }
 
-
         public Peca peca(int linha, int coluna)
         {
             return Pecas[linha, coluna];
@@ -42,14 +41,18 @@ namespace tabuleiro
             {
                 return false;
             }
-
         }
 
         public void colocarPeca(Peca p, Posicao pos)
         {
+
+            if (!existePeca(pos))
+            {
+                throw new TabuleiroException("Já existe uma peça nessa posição!");
+            } 
             Pecas[pos.Linha, pos.Coluna] = p;
             p.Posicao = pos;
-
+                
         }
 
         public bool posicaoValida(Posicao pos)

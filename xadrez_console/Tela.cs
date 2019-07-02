@@ -9,8 +9,6 @@ namespace xadrez_console
         public static void imprimirTabuleiro(Tabuleiro tab)
         {
 
-            
-
             for(int i = 0; i<tab.Linhas; i++)
             {
 
@@ -27,8 +25,6 @@ namespace xadrez_console
                 }
 
                 Console.WriteLine();
-
-
 
             }
         }

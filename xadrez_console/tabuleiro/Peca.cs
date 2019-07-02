@@ -19,8 +19,6 @@ namespace tabuleiro
             Cor = cor;
             QteMovimentos = 0;
 
-
-
         }
 
 
